@@ -25,7 +25,7 @@
     "test": "npm run build && npm run generate-test-files && bash buildtools/run_tests.sh",
     "serve": "npm run build && npm run generate-test-files && gulp serve",
     "generate-test-files": "bash buildtools/generate_test_files.sh",
-    "prepublish-broken": "npm run test && cp -r dist demo/public"
+    "prepublish": "npm run build && cp -r dist demo/public"
   },
   "test": "npm run test",
   "author": "Google",
