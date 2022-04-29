@@ -21,11 +21,11 @@
     "build": "gulp",
     "build-all": "gulp build-all",
     "build-soy": "gulp build-soy",
-    "demo": "npm run build && ./buildtools/run_demo.sh",
-    "test": "npm run build && npm run generate-test-files && ./buildtools/run_tests.sh",
+    "demo": "npm run build && bash buildtools/run_demo.sh",
+    "test": "npm run build && npm run generate-test-files && bash buildtools/run_tests.sh",
     "serve": "npm run build && npm run generate-test-files && gulp serve",
-    "generate-test-files": "./buildtools/generate_test_files.sh",
-    "prepublish": "npm run test && cp -r dist demo/public"
+    "generate-test-files": "bash buildtools/generate_test_files.sh",
+    "prepublish-broken": "npm run test && cp -r dist demo/public"
   },
   "test": "npm run test",
   "author": "Google",
